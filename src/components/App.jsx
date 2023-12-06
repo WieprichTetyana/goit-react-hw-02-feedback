@@ -3,12 +3,14 @@ import FeedbackOptions from './Feedback';
 import Section from './Section';
 import Statistics from './Statistics';
 import Notification from './Notification';
+
 const container = {
   maxWidth: '800px',
   padding: '20px',
   margin: '0 auto',
   backgroundColor: 'thistle',
 };
+
 class App extends Component {
   state = {
     good: 0,
