@@ -1,12 +1,13 @@
 import React from 'react';
+import styled from 'styled-components';
 
-const titleStyle = {
-  textAlign: 'center',
-  fontSize: '24px',
-  color: '#333',
-};
+const Title = styled.div`
+  text-align: center;
+  font-size: 24px;
+  color: #333;
+`;
 
 const Notification = () => {
-  return <div style={titleStyle}>No feedback given</div>;
+  return <Title>No feedback given</Title>;
 };
 export default Notification;

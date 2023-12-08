@@ -3,13 +3,14 @@ import FeedbackOptions from './Feedback';
 import Section from './Section';
 import Statistics from './Statistics';
 import Notification from './Notification';
+import styled from 'styled-components';
 
-const container = {
-  maxWidth: '800px',
-  padding: '20px',
-  margin: '0 auto',
-  backgroundColor: 'thistle',
-};
+const Container = styled.div`
+  max-width: 800px;
+  padding: 20px;
+  margin: 0 auto;
+  background-color: thistle;
+`;
 
 class App extends Component {
   state = {
@@ -44,15 +45,15 @@ class App extends Component {
     const feedbackOptions = ['good', 'neutral', 'bad'];
 
     return (
-      <div style={container}>
-        <Section title="Отзывы о кафе Expresso">
+      <Container>
+        <Section title="Reviews of cafe Expresso">
           <FeedbackOptions
             options={feedbackOptions}
             onLeaveFeedback={this.handleFeedback}
           />
         </Section>
 
-        <Section title="Статистика">
+        <Section title="Statistics">
           {totalFeedback > 0 ? (
             <Statistics
               good={good}
@@ -65,7 +66,7 @@ class App extends Component {
             <Notification message="There is no feedback" />
           )}
         </Section>
-      </div>
+      </Container>
     );
   }
 }
